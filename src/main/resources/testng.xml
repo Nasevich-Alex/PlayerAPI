@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API tests" verbose="1" parallel="tests"
+       thread-count="3" group-by-instances="true">
+    <test name="SearchTest">
+       <classes>
+            <class name="TestClass">
+                <methods>
+                    <include name="verifyAllPlayersPositiveTest"/>
+                    <include name="playerGetByIdPositiveTest"/>
+                    <include name="playerGetByIdNegativeTest"/>
+                    <include name="deletePlayerPositiveTest"/>
+                    <include name="deletePlayerNegativeTest"/>
+                    <include name="createPlayerPositiveTest"/>
+                    <include name="createPlayerWithInvalidAgeTest"/>
+                    <include name="findPlayerByInvalidId"/>
+                    <include name="updatePlayerPositiveTest"/>
+                    <include name="updatePlayerWithInvalidDataTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
